@@ -3,9 +3,19 @@ godown.vim
 
 ![gif](https://github.com/davinche/godown-vim/blob/static/gif.gif?raw=true)
 
+Produce a live preview of Markdown files.
+When connected to the internet, the preview uses [MathJax](https://www.mathjax.org/) to render mathematics on the page.
+
+## About
+
 A vim plugin for [Godown][gd].
 
 Godown.vim and Godown are both heavily inspired by [Livedown][ld].
+
+## Installation
+
+Add this plugin as you would any other.
+Ensure you have `go` installed.
 
 ## Commands
 

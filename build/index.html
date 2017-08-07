@@ -9,6 +9,14 @@
       #container{width:980px;margin:0 auto;padding:45px;border:1px solid #ddd;}
     </style>
     <script src="/static/highlight.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
     <script>
       window.onload = function() {
         var ws = new WebSocket('ws://{{.Host}}:{{.Port}}/connect?id={{.FileID}}');
@@ -28,6 +36,8 @@
             .forEach(function(block) {
               hljs.highlightBlock(block);
             });
+
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
         };
       }
     </script>
